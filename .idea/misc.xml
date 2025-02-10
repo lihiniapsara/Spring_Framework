@@ -6,10 +6,19 @@
       <list>
         <option value="$PROJECT_DIR$/Spring_Core_01/pom.xml" />
         <option value="$PROJECT_DIR$/Spring_Bean_Lifecycle_02/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring_DI_03/pom.xml" />
+        <option value="$PROJECT_DIR$/FullModeVsLightMode/pom.xml" />
+        <option value="$PROJECT_DIR$/Configuration_05/pom.xml" />
+        <option value="$PROJECT_DIR$/RuntimeValueInjection_06/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringEnvarament_07/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringWebMVC_08/pom.xml" />
+        <option value="$PROJECT_DIR$/RestController/pom.xml" />
+        <option value="$PROJECT_DIR$/Back_End/pom.xml" />
+        <option value="$PROJECT_DIR$/Back_End_10/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

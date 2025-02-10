@@ -7,7 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Spring_Bean_Lifecycle_02" />
+        <module name="FullModeVsLightMode_04" />
         <module name="Spring_Core_01" />
+        <module name="Configuration_05" />
+        <module name="Spring_DI_03" />
+        <module name="RestController_09" />
+        <module name="SpringEnvarament_07" />
+        <module name="SpringWebMVC_08" />
+        <module name="Back_End" />
+        <module name="RuntimeValueInjection_06" />
       </profile>
     </annotationProcessing>
   </component>

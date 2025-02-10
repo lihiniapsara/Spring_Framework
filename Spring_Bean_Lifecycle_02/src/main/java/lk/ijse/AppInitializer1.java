@@ -10,10 +10,12 @@ public class AppInitializer1 {
         context.register(AppConfig.class);
         context.refresh();
 
-        TestBean1 ref1 = context.getBean(TestBean1.class);
+        /*TestBean1 ref1 = context.getBean(TestBean1.class);
         System.out.println(ref1);
         TestBean1 ref2 = context.getBean(TestBean1.class);
-        System.out.println(ref2);
+        System.out.println(ref2);*/
+
+        context.registerShutdownHook();
 
     }
 }
