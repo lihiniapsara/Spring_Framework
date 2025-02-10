@@ -37,6 +37,7 @@ public class CustomerController {
 
         return customerDTO;
     }
+
     @DeleteMapping("delete/{id}")
     public boolean deleteCustomer(@PathVariable ("id") String id) {
         System.out.println(id+"    c id");
