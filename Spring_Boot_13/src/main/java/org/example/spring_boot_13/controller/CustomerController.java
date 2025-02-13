@@ -5,6 +5,8 @@ import org.example.spring_boot_13.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("api/v1/customer")
 public class CustomerController {
@@ -17,5 +19,21 @@ public class CustomerController {
         System.out.println(customerDTO.getName());
         customerService.addCustomer(customerDTO);
         return customerDTO.toString();
+    }
+    @GetMapping("getAll")
+    public ArrayList<CustomerDTO> getCustomer() {
+        return customerService.getAllCustomers();
+    }
+
+    @PutMapping("update")
+    public String updateCustomer(@RequestBody CustomerDTO customerDTO) {
+        customerService.updateCustomer(customerDTO);
+        return customerDTO.toString();
+    }
+
+    @DeleteMapping("delete/{id}")
+    public String deleteCustomer(@PathVariable int id) {
+        customerService.deleteCustomer(id);
+        return "Customer Deleted with id " + id;
     }
 }
