@@ -16,6 +16,7 @@
         <module name="SpringWebMVC_08" />
         <module name="Back_End" />
         <module name="RuntimeValueInjection_06" />
+        <module name="Spring_Data_JPA_12" />
       </profile>
     </annotationProcessing>
   </component>
