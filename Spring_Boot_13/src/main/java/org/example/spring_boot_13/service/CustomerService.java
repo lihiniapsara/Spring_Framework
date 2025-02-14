@@ -15,6 +15,9 @@ public class CustomerService {
     private CustomerRepo customerRepo;
     //data save
     public boolean addCustomer(CustomerDTO customerDTO) {
+        if (customerRepo.existsById(customerDTO.getId())) {
+            return false;
+            }
         Customer customer = new Customer(customerDTO.getId(), customerDTO.getName(), customerDTO.getAddress());
         customerRepo.save(customer);
         return true;
@@ -26,10 +29,6 @@ public class CustomerService {
         return customerDTOS;
     }
 
-    public void updateCustomer(CustomerDTO customerDTO) {
-        Customer customer = new Customer(customerDTO.getId(), customerDTO.getName(), customerDTO.getAddress());
-        customerRepo.save(customer);
-    }
 
     public void deleteCustomer(int id) {
         customerRepo.deleteById(id);

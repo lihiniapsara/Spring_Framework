@@ -15,10 +15,10 @@ public class CustomerController {
     private CustomerService customerService;
 
     @PostMapping("save")
-    public String saveCustomer(@RequestBody CustomerDTO customerDTO) {
+    public boolean saveCustomer(@RequestBody CustomerDTO customerDTO) {
         System.out.println(customerDTO.getName());
-        customerService.addCustomer(customerDTO);
-        return customerDTO.toString();
+        boolean isSaved = customerService.addCustomer(customerDTO);
+        return isSaved;
     }
     @GetMapping("getAll")
     public ArrayList<CustomerDTO> getCustomer() {
@@ -27,7 +27,7 @@ public class CustomerController {
 
     @PutMapping("update")
     public String updateCustomer(@RequestBody CustomerDTO customerDTO) {
-        customerService.updateCustomer(customerDTO);
+        customerService.addCustomer(customerDTO);
         return customerDTO.toString();
     }
 
