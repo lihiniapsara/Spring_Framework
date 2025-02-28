@@ -45,7 +45,7 @@ public class PlaceOrderService {
 
     @Transactional
     public boolean placeOrder(int cid, ArrayList<ItemDTO> arrayList, double tot) {
-        try {
+        /*try {
             Optional<Customer> customer = customerRepo.findById(cid);
             Orders orders = new Orders(tot, customer.get());
             orderRepo.save(orders);
@@ -57,9 +57,9 @@ public class PlaceOrderService {
                 placeOrderRepo.save(orderDetail);
 
 
-/*
+*//*
                 placeOrderRepo.save(orderDetail);
-*/
+*//*
 
                 itemRepo.reduceQTY(itemDTO.getCode(), itemDTO.getQty());
             }
@@ -67,6 +67,7 @@ public class PlaceOrderService {
             e.printStackTrace();
             return false;
         }
-        return true;
+        return true;*/
+        return false;
     }
     }
