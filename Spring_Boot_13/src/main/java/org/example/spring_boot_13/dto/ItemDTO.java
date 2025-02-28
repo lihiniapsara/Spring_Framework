@@ -1,40 +1,24 @@
 package org.example.spring_boot_13.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class ItemDTO {
     private int code;
     private String description;
     private double price;
+    private int qty;
 
-    public ItemDTO(int code, String description, double price) {
+    public ItemDTO(int code, int qty, double price) {
         this.code = code;
-        this.description = description;
+        this.qty = qty;
         this.price = price;
     }
 
-    public ItemDTO() {
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 }

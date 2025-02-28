@@ -9,9 +9,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class CustomerDTO {
-    private int id;
-    private String name;
-    private String address;
-
+public class OrderDTO {
+    private long id;
+    private double total;
+    private CustomerDTO customer;
 }

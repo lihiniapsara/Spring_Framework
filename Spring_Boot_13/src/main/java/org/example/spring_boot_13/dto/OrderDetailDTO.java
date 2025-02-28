@@ -5,13 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class CustomerDTO {
-    private int id;
-    private String name;
-    private String address;
-
+public class OrderDetailDTO {
+    private long cid;
+    private ArrayList<ItemDTO> arrayList;
+    private double tot;
 }

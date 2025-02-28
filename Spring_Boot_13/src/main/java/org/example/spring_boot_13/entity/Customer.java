@@ -3,6 +3,9 @@ package org.example.spring_boot_13.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -10,6 +13,9 @@ public class Customer {
     private int id;
     private String name;
     private String address;
+
+    @OneToMany(mappedBy = "customer")
+    private List<Orders> ordersList;
 
     public Customer(int id, String name, String address) {
         this.id = id;
