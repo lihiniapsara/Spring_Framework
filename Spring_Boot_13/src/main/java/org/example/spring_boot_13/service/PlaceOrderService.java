@@ -45,21 +45,16 @@ public class PlaceOrderService {
 
     @Transactional
     public boolean placeOrder(int cid, ArrayList<ItemDTO> arrayList, double tot) {
-        /*try {
+        try {
             Optional<Customer> customer = customerRepo.findById(cid);
             Orders orders = new Orders(tot, customer.get());
             orderRepo.save(orders);
 
             for (ItemDTO itemDTO : arrayList) {
-                System.out.println(orders.getId() + "   jjjjjjd");
                 OrderDetail orderDetail = new OrderDetail(itemDTO.getQty() * itemDTO.getPrice(), itemDTO.getQty(), itemRepo.findById(itemDTO.getCode()).get(), orders);
 
                 placeOrderRepo.save(orderDetail);
 
-
-*//*
-                placeOrderRepo.save(orderDetail);
-*//*
 
                 itemRepo.reduceQTY(itemDTO.getCode(), itemDTO.getQty());
             }
@@ -67,7 +62,6 @@ public class PlaceOrderService {
             e.printStackTrace();
             return false;
         }
-        return true;*/
-        return false;
+        return true;
     }
     }
