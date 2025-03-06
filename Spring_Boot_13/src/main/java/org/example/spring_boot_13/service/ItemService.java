@@ -29,6 +29,7 @@ public class ItemService {
     }
 
     public ArrayList<ItemDTO> getAllItems() {
+        System.out.println("22");
         /*ArrayList<ItemDTO> itemDTOS = new ArrayList<>();
         itemRepo.findAll().forEach(item -> itemDTOS.add(new ItemDTO(item.getCode(), item.getDescription(), item.getPrice())));
 */        return modelMapper.map(itemRepo.findAll(), new TypeToken<List<ItemDTO>>() {

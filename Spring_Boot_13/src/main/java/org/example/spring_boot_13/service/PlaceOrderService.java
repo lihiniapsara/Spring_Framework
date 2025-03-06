@@ -3,6 +3,7 @@ package org.example.spring_boot_13.service;
 import jakarta.transaction.Transactional;
 import org.example.spring_boot_13.dto.ItemDTO;
 import org.example.spring_boot_13.entity.Customer;
+import org.example.spring_boot_13.entity.Item;
 import org.example.spring_boot_13.entity.OrderDetail;
 import org.example.spring_boot_13.entity.Orders;
 import org.example.spring_boot_13.repo.CustomerRepo;
@@ -35,12 +36,16 @@ public class PlaceOrderService {
 
 
     public List<Integer> getAllItemIDs() {
+        System.out.println("get item ids");
         return itemRepo.findAllIds();
     }
 
     public ItemDTO getAllbyId(int code) {
         System.out.println("sss");
-        return modelMapper.map(placeOrderRepo.getAllbyId(code), ItemDTO.class);
+        List<Item> items = placeOrderRepo.findByCode(code);
+        Item item = items.get(0);
+
+        return modelMapper.map(item, ItemDTO.class);
     }
 
     @Transactional

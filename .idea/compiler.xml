@@ -7,24 +7,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Spring_Bean_Lifecycle_02" />
         <module name="FullModeVsLightMode_04" />
         <module name="Spring_Core_01" />
-        <module name="Configuration_05" />
         <module name="Spring_DI_03" />
+        <module name="Back_End" />
+        <module name="Spring_Data_JPA_12" />
+        <module name="Spring_Bean_Lifecycle_02" />
+        <module name="Configuration_05" />
+        <module name="Spring_Sequrity_14" />
         <module name="RestController_09" />
         <module name="SpringEnvarament_07" />
         <module name="SpringWebMVC_08" />
-        <module name="Back_End" />
         <module name="RuntimeValueInjection_06" />
-        <module name="Spring_Data_JPA_12" />
         <module name="Spring_Boot_13" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring_Security_14" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Spring_Boot_13" options="-parameters" />
+      <module name="Spring_Sequrity_14" options="-parameters" />
     </option>
   </component>
 </project>

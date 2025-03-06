@@ -13,7 +13,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*" , allowedHeaders = "*")
 @RestController
-@RequestMapping("/api/v1/placeOrder")
+@RequestMapping("api/v1/placeOrder")
 public class PlaceOrderController {
 
     @Autowired
@@ -34,9 +34,10 @@ public class PlaceOrderController {
         return placeOrderService.getAllItemIDs();
     }
 
-    @GetMapping("/getAllbyId/{id}")
-    public ItemDTO getAllbyId(@PathVariable int id){
-        return placeOrderService.getAllbyId(id);
+    @GetMapping("/getAllbyId/{code}")
+    public ItemDTO getAllbyId(@PathVariable int code){
+        System.out.println(code+ "kkkk");
+        return placeOrderService.getAllbyId(code);
 
     }
 

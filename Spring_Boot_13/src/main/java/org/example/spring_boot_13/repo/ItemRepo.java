@@ -10,7 +10,7 @@ import java.util.List;
 public interface ItemRepo extends JpaRepository<Item, Integer> {
     boolean existsByCode(int code);
 
-    @Query(value = "select id from item", nativeQuery = true)
+    @Query(value = "select code from item", nativeQuery = true)
     List<Integer> findAllIds();
 
     @Modifying

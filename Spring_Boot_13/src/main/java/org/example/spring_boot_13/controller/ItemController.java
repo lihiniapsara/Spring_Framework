@@ -22,6 +22,7 @@ public class ItemController {
 
     @GetMapping("getAll")
     public ArrayList<ItemDTO> getAllItems() {
+        System.out.println("11");
         return itemService.getAllItems();
     }
 
